@@ -1,5 +1,5 @@
---- VirtualBox-7.0.14/Config.kmk	2024-01-15 22:56:53
-+++ VirtualBox-7.0.14/Config_patch.kmk	2024-03-06 21:59:46
+--- Config.kmk	2024-01-15 22:56:53
++++ Config_patch.kmk	2024-03-12 21:18:16
 @@ -5,7 +5,7 @@
  # This file gets included by all makefiles through the
  # include $(KBUILD_PATH)/header.kmk statement.
@@ -25,6 +25,15 @@
     VBOX_WITH_VBOXDRV =
    endif
   endif
+@@ -1924,7 +1924,7 @@
+  if   ("$(VBOX_VCC_TOOL_STEM)" >= "VCC140" && "$(KBUILD_TARGET)" == "win") \
+    || ("$(KBUILD_TARGET)" != "darwin" && "$(KBUILD_TARGET)" != "win" && "$(KMK_REVISION)" >= 3566) \
+    || ("$(KBUILD_TARGET)" == "darwin" &&                                "$(KMK_REVISION)" >= 3579)
+-  VBOX_WITH_AUTOMATIC_DEFS_QUOTING := 1
++  VBOX_WITH_AUTOMATIC_DEFS_QUOTING := 
+  endif
+ endif
+ 
 @@ -1933,7 +1933,7 @@
  # Default tool nonsense.
  #
