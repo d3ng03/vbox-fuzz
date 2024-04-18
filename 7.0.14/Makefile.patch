@@ -1,0 +1,24 @@
+--- VirtualBox-7.0.14/src/VBox/Devices/PC/ipxe/Makefile.kmk	2024-01-15 23:10:08.000000000 +0900
++++ fuzz_VirtualBox-7.0.14/src/VBox/Devices/PC/ipxe/Makefile.kmk	2024-04-19 04:53:58.035697588 +0900
+@@ -179,15 +179,15 @@
+ 	VERSION_PATCH=1  \
+ 	ASM_TCHAR=@ \
+ 	ASM_TCHAR_OPS=@
+- ifdef VBOX_WITH_AUTOMATIC_DEFS_QUOTING
++# ifdef VBOX_WITH_AUTOMATIC_DEFS_QUOTING
+   TEMPLATE_iPxe_DEFS += \
+   	VERSION="1.21.1" \
+   	BUILD_NAME="VBox"
+- else
+-  TEMPLATE_iPxe_DEFS += \
+-  	VERSION=\"1.21.1\" \
+-  	BUILD_NAME=\"VBox\"
+- endif
++# else
++#  TEMPLATE_iPxe_DEFS += \
++#  	VERSION=\"1.21.1\" \
++#  	BUILD_NAME=\"VBox\"
++# endif
+ 
+  #
+  # iPxeBaseBin - The iPXE ROM base binary.

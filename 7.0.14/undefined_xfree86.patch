@@ -8,16 +8,6 @@
 +__sanitizer_cov_trace_pc_guard_init
 +__afl_area_ptr
 +__start___sancov_guards
-+waitpid
-+getenv
-+shmat
-+write
-+read
-+fork
-+_GLOBAL_OFFSET_TABLE_
-+atoi 
-+_exit
-+close
  AddCallback
  AddEnabledDevice
  AddExtension
